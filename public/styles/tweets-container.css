@@ -1,0 +1,24 @@
+#tweets-container {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: 2px solid black;
+  /* height: 300px; */
+}
+
+#tweets-container:hover {
+  box-shadow: 10px 5px 5px #d3d3d3;
+}
+
+/* article.tweet header {
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* .tweets-container header {
+ display: flex;
+  justify-content: space-between;
+} */
+
+
+/* tweets-container-footer {
+} */

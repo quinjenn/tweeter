@@ -1,0 +1,42 @@
+.new-tweet {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  /* justify-content: center; */
+}
+
+.tweet-form{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#tweet-button-count {
+  display: flex;
+  /* flex-direction: row; TWEET BUTTON WONT MOVE TO THE LEFT */ 
+  justify-content: space-between; 
+}
+
+.tweet-form textarea {
+  border: none;
+  border-bottom: 2px solid;
+}
+
+button {
+  background-color: #4056a1;
+  color: #ffffff;
+  margin: 0 auto;
+  border-color: transparent;
+  border-radius: 3px;
+  transition: all, 200ms, ease-in-out;
+  font-family: "Bungee", cursive;
+  /* display: flex; */
+  /* justify-content: flex-start; */
+}
+
+button:hover {
+  opacity: 0.7;
+  color: #4056a1;
+  background-color: #ffffff;
+  border-color: #4056a1;
+  cursor: pointer;
+}

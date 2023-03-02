@@ -9,9 +9,11 @@ const app           = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use(express.json());
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 const db = require("./lib/in-memory-db");
+const { tweets } = require("./lib/in-memory-db");
 
 // The `data-helpers` module provides an interface to the database of tweets.
 // This simple interface layer has a big benefit: we could switch out the
@@ -34,4 +36,32 @@ app.use("/tweets", tweetsRoutes);
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
+});
+
+
+// LECTURE INPUT MAR 1
+//GET /tweets
+app.get('/tweet', (req, res) => {
+const arrOfTweets = Object.values(tweets);
+res.json(arrOfTweets);
+});
+
+// POST /tweets
+app.post('/tweet', (req, res) => {
+  console.log(req.body);
+
+  const name = req.body.name;
+  const content = req.body.content;
+
+  const newTweet = {
+    handle: handle,
+    name: name,
+    content: content,
+  }
+
+  // update tweets
+  tweets[handle] = newTweet;
+  console.log(tweets);
+
+  res.send('tweet was created!');
 });

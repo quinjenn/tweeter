@@ -1,0 +1,21 @@
+nav {
+  color: #ffffff;
+  background-color: #f8adb0;
+  height: 120px;
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.title {
+  font-family: "Bungee", cursive;
+  margin-top: 50px;
+  padding-left: 1.5em;
+}
+
+.titlenote {
+  margin-top: 50px;
+  padding-right: 1.5em;
+}
