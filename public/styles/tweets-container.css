@@ -9,15 +9,24 @@
   box-shadow: 10px 5px 5px #d3d3d3;
 }
 
-/* article.tweet header {
+.tweet {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet .profile {
   display: flex;
   justify-content: space-between;
-} */
+  align-items: center;
+}
 
-/* .tweets-container header {
- display: flex;
-  justify-content: space-between;
-} */
+.tweet .picture-name {
+  display: flex;
+  align-items: center;
+}
 
-/* tweets-container-footer {
-} */
+.tweet-footer i:hover {
+  color: #4056a1;
+}
+
+

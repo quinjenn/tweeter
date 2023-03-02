@@ -21,23 +21,23 @@ body {
   background-color: #f8adb0;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
-  /* width: 100%; */
 }
 
 .main-container {
-  width: 95%;
+  width: 100%;
   background-color: #f4f1ec;
-  margin-top: 400px;
+  margin: 0 auto;
   text-align: center;
-  /* display: flex;
-  flex-direction: column; */
-  /* justify-content: center; */
 }
 
-/* .tweet-text{
-  display: flex;
-  justify-content: center;
-} */
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+@media only screen and (min-width: 1024px) {
+  .main-container {
+    display: flex;
+    padding: 25px;
+  }
+
+  .body-tweets-container {
+    max-width: 65vw;
+  }
+}
+

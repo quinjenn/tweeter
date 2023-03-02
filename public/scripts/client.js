@@ -18,17 +18,19 @@ const tweetDatabase = {
 
 // takes in a tweet object and returns a tweet <article> element
 const createTweetElement = function (tweetData) {
+  const ago = timeago.format(tweetData.created_at);
   const $tweet = $(`
   <article class="tweet">
-    <header>
-      <div class="tweet-header">
-        <img src="${tweetData.user.avatars}">
-        <h4>${tweetData.user.name}</h4>
+    <header class="profile">
+      <div class="picture-name">
+        <img class="picture" src="${tweetData.user.avatars}">
+        <div class="name">${tweetData.user.name}</div>
       </div>
-      <h4>${tweetData.user.handle}</h4>
+      <div class="handle">${tweetData.user.handle}</div>
     </header>
     <p>${tweetData.content.text}</p>
     <footer class="tweet-footer">
+    <div>${ago}</div>
       <div>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>

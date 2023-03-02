@@ -19,6 +19,7 @@
 .tweet-form textarea {
   border: none;
   border-bottom: 2px solid;
+  background-color: transparent;
 }
 
 button {
