@@ -4,7 +4,7 @@
   /* justify-content: center; */
 }
 
-.tweet-form{
+.tweet-form {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -12,8 +12,8 @@
 
 #tweet-button-count {
   display: flex;
-  /* flex-direction: row; TWEET BUTTON WONT MOVE TO THE LEFT */ 
-  justify-content: space-between; 
+  /* flex-direction: row; TWEET BUTTON WONT MOVE TO THE LEFT */
+  justify-content: space-between;
 }
 
 .tweet-form textarea {

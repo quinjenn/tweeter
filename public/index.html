@@ -37,8 +37,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" async src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
 
   </head>
 
@@ -61,34 +62,16 @@
     <!-- Page-specific (main) content here -->
     <main class="main-container">
         <section class="new-tweet">
-          <form class="tweet-form" action="/tweets/" method="POST" placeholder="hello">
-            <!-- <label for="tweet-text">What are you humming about?</label> -->
-            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <form class="tweet-form"  method="POST">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
             <div id="tweet-button-count">
               <button type="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
           </form>
 
-       <section id="tweets-container">
-          <article class="tweet">
-            <header>
-              <div class="tweet-header">
-              <i class="fa-solid fa-user-ninja"></i> 
-              <h4>The Tweet Ninja</h4>
-              </div>
-              </header>
-               <p>If I have seen further, it is by standing on the shoulders of giants.</p>
-              <footer class="tweet-footer">
-                <p>10 days ago</p>
-                <div class="tweet-icons">
-                 <i class="fa-solid fa-flag"></i>
-                 <i class="fa-solid fa-retweet"></i>
-                 <i class="fa-solid fa-heart"></i>
-              </div>
-              </footer>
-          </article>
-       </section>
+       <section id="tweets-container"></section>
     </main>
   </body>
 </html>

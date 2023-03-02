@@ -2,10 +2,10 @@
 
 // Basic express setup:
 
-const PORT          = 8080;
-const express       = require("express");
-const bodyParser    = require("body-parser");
-const app           = express();
+const PORT = 8080;
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -38,16 +38,15 @@ app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
 
-
 // LECTURE INPUT MAR 1
 //GET /tweets
-app.get('/tweet', (req, res) => {
-const arrOfTweets = Object.values(tweets);
-res.json(arrOfTweets);
+app.get("/tweet", (req, res) => {
+  const arrOfTweets = Object.values(tweets);
+  res.json(arrOfTweets);
 });
 
 // POST /tweets
-app.post('/tweet', (req, res) => {
+app.post("/tweet", (req, res) => {
   console.log(req.body);
 
   const name = req.body.name;
@@ -57,11 +56,11 @@ app.post('/tweet', (req, res) => {
     handle: handle,
     name: name,
     content: content,
-  }
+  };
 
   // update tweets
   tweets[handle] = newTweet;
   console.log(tweets);
 
-  res.send('tweet was created!');
+  res.send("tweet was created!");
 });
