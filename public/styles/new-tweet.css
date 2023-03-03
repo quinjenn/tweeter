@@ -41,3 +41,12 @@ button:hover {
   border-color: #4056a1;
   cursor: pointer;
 }
+
+.negative-counter {
+  color: red;
+}
+
+#error-message {
+  display: none;
+  color: red;
+}

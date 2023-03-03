@@ -94,9 +94,16 @@ $tweetForm.on("submit", (event) => {
   const tweetLength = $tweetContent.val().trim().length;
 
   if (tweetLength === 0) {
-    alert("You must write something to tweet it!");
+    // error message replacing alert
+    const errorMessage = "You must write something to tweet!";
+    $("#error-message").text(errorMessage);
+    $("#error-message").slideDown();
+    // alert("You must write something to tweet!");
   } else if (tweetLength > 140) {
-    alert("Tweet limit is 140 characters!");
+    // alert("Tweet limit is 140 characters!");
+    const errorMessage = "Tweet limit is 140 characters!";
+    $("#error-message").text(errorMessage);
+    $("#error-message").slideDown();
   } else {
     // urlencode the data
     const urlencoded = $tweetForm.serialize();
