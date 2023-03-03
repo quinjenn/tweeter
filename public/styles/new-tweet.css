@@ -1,7 +1,6 @@
 .new-tweet {
   padding-top: 2em;
   padding-bottom: 2em;
-  /* justify-content: center; */
 }
 
 .tweet-form {
@@ -31,8 +30,6 @@ button {
   border-radius: 3px;
   transition: all, 200ms, ease-in-out;
   font-family: "Bungee", cursive;
-  /* display: flex; */
-  /* justify-content: flex-start; */
 }
 
 button:hover {
