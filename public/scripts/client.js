@@ -18,6 +18,13 @@ const tweetDatabase = {
 
 // takes in a tweet object and returns a tweet
 const createTweetElement = function (tweetData) {
+  // prevent cross-site scripting
+  // method 2: use escape function b/c element is string literal
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   const ago = timeago.format(tweetData.created_at);
   const $tweet = $(`
   <article class="tweet">
@@ -28,9 +35,9 @@ const createTweetElement = function (tweetData) {
       </div>
       <div class="handle">${tweetData.user.handle}</div>
     </header>
-    <p>${tweetData.content.text}</p>
+    <p>${escape(tweetData.content.text)}</p>
     <footer class="tweet-footer">
-    <div>${ago}</div>
+    <div>${escape(ago)}</div>
       <div>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
@@ -45,10 +52,9 @@ const createTweetElement = function (tweetData) {
 const $tweet = createTweetElement(tweetDatabase);
 
 // Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
-$("#tweets-container").append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+// console.log($tweet); // to see what it looks like
+// $("#tweets-container").append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
-// LECTURE INPUT MAR 1 structure
 // global constant
 const $tweetsContainer = $("#tweets-container");
 
