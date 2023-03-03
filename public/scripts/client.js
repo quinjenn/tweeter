@@ -16,7 +16,7 @@ const tweetDatabase = {
   created_at: 1461116232227,
 };
 
-// takes in a tweet object and returns a tweet <article> element
+// takes in a tweet object and returns a tweet
 const createTweetElement = function (tweetData) {
   const ago = timeago.format(tweetData.created_at);
   const $tweet = $(`
@@ -62,8 +62,6 @@ const renderTweets = function () {
     method: "GET",
     url: "/tweets",
     success: (tweets) => {
-      console.log(tweets);
-      console.log($tweetsContainer);
       $tweetsContainer.empty();
       //loops through the provided array
       for (const tweet of tweets) {
@@ -79,25 +77,32 @@ const renderTweets = function () {
 };
 
 renderTweets();
-/////
 
 const $tweetForm = $(".tweet-form");
 $tweetForm.on("submit", (event) => {
   // prevent the default behaviour of browser
   event.preventDefault();
   // get the data from the form
-  // urlencode the data
-  const urlencoded = $tweetForm.serialize();
-  // console.log(urlencoded);
-  // make an AJAX post request
-  $.ajax({
-    method: "POST",
-    url: "/tweets",
-    data: urlencoded,
-    success: (response) => {
-      console.log(response);
-      // fetch the tweets again
-      renderTweets();
-    },
-  });
+  // add form validation
+  const $tweetContent = $tweetForm.find("#tweet-text");
+  const tweetLength = $tweetContent.val().trim().length;
+
+  if (tweetLength === 0) {
+    alert("You must write something to tweet it!");
+  } else if (tweetLength > 140) {
+    alert("Tweet limit is 140 characters!");
+  } else {
+    // urlencode the data
+    const urlencoded = $tweetForm.serialize();
+    // make an AJAX post request
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: urlencoded,
+      success: (response) => {
+        // fetch the tweets again
+        renderTweets();
+      },
+    });
+  }
 });
