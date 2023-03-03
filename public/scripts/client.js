@@ -37,8 +37,8 @@ const createTweetElement = function (tweetData) {
     </header>
     <p>${escape(tweetData.content.text)}</p>
     <footer class="tweet-footer">
-    <div>${escape(ago)}</div>
-      <div>
+    <div class="time-ago">${escape(ago)}</div>
+      <div id="icons-footer">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
         <i class="fa-solid fa-heart"></i>

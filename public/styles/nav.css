@@ -1,5 +1,4 @@
 nav {
-  /* position: fixed; */
   color: #ffffff;
   background-color: #f8adb0;
   height: 120px;
@@ -14,9 +13,11 @@ nav {
   font-family: "Bungee", cursive;
   margin-top: 50px;
   padding-left: 1.5em;
+  font-size: 36px;
 }
 
 .titlenote {
   margin-top: 50px;
   padding-right: 1.5em;
+  font-size: 24px;
 }

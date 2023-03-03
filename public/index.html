@@ -68,21 +68,30 @@
       </header>
 
       <!-- Page-specific (main) content here -->
-      <div class="body-tweets-container">
-        <section class="new-tweet-container">
-          <span id="error-message"></span>
-          <form class="tweet-form" method="POST">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
-            <div id="tweet-button-count">
-              <button type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text"
-                >140</output
-              >
-            </div>
-          </form>
-        </section>
-        <section id="tweets-container"></section>
+      <div class="wrapped-body-container">
+        <div class="body-tweets-container">
+          <section class="new-tweet-container">
+            <span id="error-message"></span>
+            <form class="tweet-form" method="POST">
+              <textarea
+                name="text"
+                id="tweet-text"
+                placeholder="What are you humming about?"
+              ></textarea>
+              <div id="tweet-button-count">
+                <div id="tweet-button">
+                  <button type="submit">Tweet</button>
+                </div>
+                <div id="count">
+                  <output name="counter" class="counter" for="tweet-text"
+                    >140</output
+                  >
+                </div>
+              </div>
+            </form>
+          </section>
+          <section id="tweets-container"></section>
+        </div>
       </div>
     </main>
   </body>
