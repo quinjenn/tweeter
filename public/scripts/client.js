@@ -114,6 +114,8 @@ $tweetForm.on("submit", (event) => {
       data: urlencoded,
       success: (response) => {
         // fetch the tweets again
+       $(".counter").text("140");
+       $("textarea").val("");
         renderTweets();
       },
     });
