@@ -7,6 +7,7 @@ This repository is a front-end single-page website using HTML, CSS, JS, jQuery, 
 ## Final Product
 
 !["Screenshot of full page"](https://github.com/quinjenn/tweeter/blob/master/docs/tweeter-full-page.png)
+!["Screenshot of full mobile page"](https://github.com/quinjenn/tweeter/blob/master/docs/tweeter-full-page-mobile.png)
 !["Screenshot of Tweet text page"](https://github.com/quinjenn/tweeter/blob/master/docs/tweet-text.png)
 !["Screenshot of Tweet response page"](https://github.com/quinjenn/tweeter/blob/master/docs/tweet-response.png)
 

@@ -19,7 +19,6 @@ html {
 body {
   color: #545149;
   background-color: #f8adb0;
-  /* font-size: 24px; */
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -42,26 +41,25 @@ body {
   display: flex;
   justify-content: center;
   font-size: 24px;
+  width: 100%;
 }
 
 @media only screen and (min-width: 1024px) {
   .main-container {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
   .body-tweets-container {
     max-width: 65vw;
     padding: 25px;
+    padding-top: 200px;
   }
 }
 
-/* @media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .main-container {
-    display: flex;
-    padding: 25px;
+    padding: 0;
   }
-
-  .body-tweets-container {
-    max-width: 65vw;
-  }
-} */
+}

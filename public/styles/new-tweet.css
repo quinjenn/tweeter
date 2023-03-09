@@ -22,7 +22,7 @@
   background-color: transparent;
 }
 
-button {
+.tweet-submit-button {
   background-color: #4056a1;
   color: #ffffff;
   margin: 0 auto;
@@ -32,7 +32,7 @@ button {
   font-family: "Bungee", cursive;
 }
 
-button:hover {
+.tweet-submit-button:hover {
   opacity: 0.7;
   background-color: #f8adb0;
   border-color: #f8adb0;
@@ -46,4 +46,8 @@ button:hover {
 #error-message {
   display: none;
   color: red;
+}
+
+.tweet-words {
+  word-break: break-word;
 }

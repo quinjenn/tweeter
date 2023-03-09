@@ -57,8 +57,10 @@
       <span class="title">tweeter</span>
       <!-- <span class="titlenote">Write a new tweet</span> -->
       <div class="titlenote">
-        <span>Write a new tweet</span>
-        <i class="fa-solid fa-angles-down"></i>
+        <span class="write-a-new-tweet">Write a new tweet</span>
+        <button class="nav-header-button">
+          <i class="fa-solid fa-angles-down"></i>
+        </button>
       </div>
     </nav>
     <main class="main-container">
@@ -84,7 +86,9 @@
               ></textarea>
               <div id="tweet-button-count">
                 <div id="tweet-button">
-                  <button type="submit">Tweet</button>
+                  <button class="tweet-submit-button" type="submit">
+                    Tweet
+                  </button>
                 </div>
                 <div id="count">
                   <output name="counter" class="counter" for="tweet-text"

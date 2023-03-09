@@ -35,7 +35,7 @@ const createTweetElement = function (tweetData) {
       </div>
       <div class="handle">${tweetData.user.handle}</div>
     </header>
-    <p>${escape(tweetData.content.text)}</p>
+    <p class="tweet-words">${escape(tweetData.content.text)}</p>
     <footer class="tweet-footer">
     <div class="time-ago">${escape(ago)}</div>
       <div id="icons-footer">
@@ -114,8 +114,8 @@ $tweetForm.on("submit", (event) => {
       data: urlencoded,
       success: (response) => {
         // fetch the tweets again
-       $(".counter").text("140");
-       $("textarea").val("");
+        $(".counter").text("140");
+        $("textarea").val("");
         renderTweets();
       },
     });
