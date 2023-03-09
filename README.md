@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is a front-end single-page website using HTML, CSS, JS, jQuery, AJAX, Node and Express. Users can compose a 140 character tweet using the textarea form and post it. The new user tweet will be generated and posted on top of the current tweets generated from a build-in library.
+This repository is a front-end single-page website using HTML, CSS, JS, jQuery, AJAX, Node and Express. Users can compose a 140 character tweet using the textarea form and post it. The new user tweet will be generated and posted on top of the current tweets generated from a build-in library. Tweeter has a responsive design that allows users to engage with the app from a desktop, tablet or mobile device.
 
 ## Final Product
 
